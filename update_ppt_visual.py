@@ -5,9 +5,10 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import PP_ALIGN
 import sys
 import os
+sys.stdout.reconfigure(encoding='utf-8')
 
 # Define file paths
-PPT_PATH = r"C:\Users\ANUP SINGH\Downloads\my.pptx"
+PPT_PATH = r"C:\Users\ANUP SINGH\OneDrive\文件\Desktop\my.pptx"
 
 def update_paragraph_text_keep_style(p, new_text):
     """
@@ -309,7 +310,7 @@ def main():
     for shape in slide10.shapes:
         if shape.shape_id == 120:
             replace_text_box_content(shape, [
-                "• Live prototype running on http://127.0.0.1:8000.",
+                "• Live prototype running on https://shoppulse-ai-o05d.onrender.com/.",
                 "• Dashboard loads stats instantly: 50,000 click events, 9,930 sessions, 78.5% cart abandonment rate, and 4,115 active threats.",
                 "• 1M events GPU benchmark scores an execution speedup of 84x (92.4 seconds on CPU Pandas vs. 1.1 seconds on GPU cuDF).",
                 "• Dropdown device filtering and risk sliders update the UI instantly (sub-50ms latency) due to backend in-memory cache indexing.",
